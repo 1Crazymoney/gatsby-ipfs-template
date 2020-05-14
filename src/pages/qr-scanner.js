@@ -14,7 +14,7 @@ class Test extends Component {
 
 
     this.state = {
-      result: 'No result',
+      result: 'No Result',
       facingMode: 'environment'
     }
   }
@@ -34,14 +34,14 @@ class Test extends Component {
     return (
       <div className="QRScanner-container">
         <h4>Facing Mode: {_this.state.facingMode}</h4>
-        <button onClick={_this.changeMode}>Change</button>
+        <button className="change-button" onClick={_this.changeMode}>Change</button>
         <QrReader
           delay={300}
           onError={this.handleError}
           onScan={this.handleScan}
           facingMode={_this.state.facingMode}
         />
-        <p>{this.state.result}</p>
+        <b><p className="qr-result">{this.state.result}</p></b>
       </div>
     )
   }
