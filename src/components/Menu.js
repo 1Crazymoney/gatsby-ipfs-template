@@ -13,6 +13,8 @@ const Menu = (props) => (
                 <li><Link onClick={props.onToggleMenu} to="/generic">Generic</Link></li>
                 <li><Link onClick={props.onToggleMenu} to="/elements">Elements</Link></li>
                 <li><Link onClick={props.onToggleMenu} to="/blog">Blog</Link></li>
+                <li><Link onClick={props.onToggleMenu} to="/qr-scanner">QR Scanner</Link></li>
+
             </ul>
             <ul className="actions vertical">
                 <li><Link to="/research" className="button special fit">Research</Link></li>
