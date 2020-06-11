@@ -40,7 +40,7 @@ class HomeIndex extends React.Component {
                           </p>
                           <ul>
                             <li>Web: <a href="https://uncensorablepublishing.com">UncensorablePublishing.com</a></li>
-                            <li>Tor: </li>
+                            <li>Tor: <a href="http://3nt2u67vy7luf73j.onion">3nt2u67vy7luf73j.onion</a></li>
                             <li>IPFS: </li>
                           </ul>
                       </div>
