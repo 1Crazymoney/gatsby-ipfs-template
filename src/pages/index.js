@@ -17,10 +17,10 @@ class HomeIndex extends React.Component {
         return (
             <Layout>
                 <Helmet
-                    title="Gatsby Starter - Forty"
+                    title="Uncensorable Publishing"
                     meta={[
-                        { name: 'description', content: 'Sample' },
-                        { name: 'keywords', content: 'sample, something' },
+                        { name: 'description', content: 'Uncensorable Publishing' },
+                        { name: 'keywords', content: 'ipfs, bch, bitcoin, bitcoin cash, web, publishing, gatsby, template' },
                     ]}
                 >
                 </Helmet>
@@ -28,6 +28,24 @@ class HomeIndex extends React.Component {
                 <Banner />
 
                 <div id="main">
+                  <section id="two">
+                      <div className="inner">
+                          <header className="major">
+                              <h2>Explore the Deep Web</h2>
+                          </header>
+                          <p>
+                            This internet is bigger than just the web. You can
+                            access this website via these links on these other
+                            networks:
+                          </p>
+                          <ul>
+                            <li>Web: <a href="https://uncensorablepublishing.com">UncensorablePublishing.com</a></li>
+                            <li>Tor: </li>
+                            <li>IPFS: </li>
+                          </ul>
+                      </div>
+                  </section>
+
                     <section id="one" className="tiles">
                         <article style={{backgroundImage: `url(${pic01})`}}>
                             <header className="major">
@@ -72,6 +90,7 @@ class HomeIndex extends React.Component {
                             <Link to="/landing" className="link primary"></Link>
                         </article>
                     </section>
+
                     <section id="two">
                         <div className="inner">
                             <header className="major">
