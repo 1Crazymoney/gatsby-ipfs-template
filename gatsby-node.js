@@ -7,7 +7,7 @@
  *  https://www.gatsbyjs.org/docs/adding-markdown-pages/
  */
 
-const path = require("path")
+const path = require('path')
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
@@ -43,5 +43,13 @@ exports.createPages = async ({ actions, graphql }) => {
         context: {}, // additional data can be passed via context
       })
     })
+  })
+}
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    node: {
+      fs: 'empty'
+    },
   })
 }

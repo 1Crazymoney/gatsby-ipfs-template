@@ -15,6 +15,7 @@
     "gatsby-source-filesystem": "^2.3.11",
     "gatsby-transformer-json": "^2.4.5",
     "gatsby-transformer-remark": "^2.8.15",
+    "memo-get-gatsby": "^1.0.2",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-collapsible": "^2.8.0",

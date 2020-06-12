@@ -45,6 +45,7 @@ class Test extends Component {
       </div>
     )
   }
+  
   changeMode() {
     let mode = _this.state.facingMode === 'user' ?
       'environment' : 'user'
