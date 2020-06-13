@@ -15,6 +15,13 @@ const Banner = (props) => (
                 the clear web, simultaniously. This makes it effectively uncensorable.
               </p>
             </div>
+
+            <div className="content">
+              <p>
+                This is just a template. The code making up this website is intended
+                to be forked to allow you to create your own uncensorable website.
+              </p>
+            </div>
         </div>
     </section>
 )
