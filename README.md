@@ -3,8 +3,8 @@
 This repository contains a website template for building a website with
 the [Gatsby framework](https://www.gatsbyjs.org/).
 
-- [Live Demo](http://troutsblog.com)
-- [Mirror](https://ipfs.io/ipfs/QmZEse3nvGhAgc518d3RkofV1SMA5MM4y5QW5rjc2rEbGk/)
+- [Live Demo](https://uncensorablepublishing.com)
+- [Mirror](https://ipfs.io/ipfs/QmSBS5st5zrVunGe8MkrEGZavGSGjQc6dzKtRaHxyYiWaP)
 
 Unlike other Gatsby starters and website templates, this template has some
 specific features:
@@ -14,7 +14,7 @@ Save your markdown files to the [markdown](./markdown) directory.
 is ready to be added to the IPFS network, and will serve the website from any
 IPFS gateway. [Here's an example](https://ipfs.io/ipfs/https://ipfs.io/ipfs/QmZEse3nvGhAgc518d3RkofV1SMA5MM4y5QW5rjc2rEbGk//)
 - Responsive and Mobile First. The site template is originally based
-on [Fourty by HTML5 Up](https://github.com/codebushi/gatsby-starter-forty). It
+on [Forty by HTML5 Up](https://github.com/codebushi/gatsby-starter-forty). It
 features mobile-first styling and easy-to-use grid system for controlling the
 mobile and desktop displays.
 
