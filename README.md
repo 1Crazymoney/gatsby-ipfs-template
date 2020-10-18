@@ -44,7 +44,7 @@ website in a decentralized, censorship-resistant way in order to leverage the
 [Streisand Effect](https://en.wikipedia.org/wiki/Streisand_effect).
 
 ## Browser IPFS Node
-This template includes an example of how to create an IPFS inside the web browser.
+This template includes an example of how to create an IPFS node inside the web browser.
 Navigate to the `/ipfs` page and follow the instructions.
 
 ## Installation
