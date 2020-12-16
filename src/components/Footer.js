@@ -35,8 +35,13 @@ const Footer = props => (
         Template maintained by the{' '}
         <a href="https://psfoundation.cash" target="_blank">
           Permissionless Software Foundation
-        </a>
+        </a>.
       </p>
+      <p>Mirrors of this site:</p>
+      <ul>
+        <li><b>Clearweb</b>: <a href="https://uncensorablepublishing.com">UncensorablePublishing.com</a></li>
+        <li><b>Tor</b>: <a href="http://mscdffxifbhxiww6k6ub2buzdn3khqzoxpcbnbhrzkypdmkqz4u5hwid.onion">mscdffxifbhxiww6k6ub2buzdn3khqzoxpcbnbhrzkypdmkqz4u5hwid.onion</a></li>
+      </ul>
     </div>
   </footer>
 )
