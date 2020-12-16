@@ -1,4 +1,3 @@
-
 const ipfsPrefix = process.argv.find(val => val === '--prefix-paths')
 
 const ipfsConfig = [
@@ -18,20 +17,20 @@ const ipfsConfig = [
   },
   'gatsby-plugin-sass',
   {
-    resolve: "gatsby-source-filesystem",
+    resolve: 'gatsby-source-filesystem',
     options: {
-      path: "./src/data/",
+      path: './src/data/',
     },
   },
   {
-    resolve: "gatsby-source-filesystem",
+    resolve: 'gatsby-source-filesystem',
     options: {
-      path: "./markdown",
-      name: "markdown-pages"
+      path: './markdown',
+      name: 'markdown-pages',
     },
   },
-  "gatsby-transformer-json",
-  "gatsby-transformer-remark",
+  'gatsby-transformer-json',
+  'gatsby-transformer-remark',
   'gatsby-plugin-sharp',
   {
     resolve: `gatsby-transformer-remark`,
@@ -45,7 +44,6 @@ const ipfsConfig = [
             // base for generating different widths of each image.
             maxWidth: 800,
             linkImagesToOriginal: true,
-            sizeByPixelDensity: true,
             showCaptions: true,
           },
         },
@@ -53,8 +51,6 @@ const ipfsConfig = [
     },
   },
 ]
-
-
 
 const normalConfig = [
   'gatsby-plugin-react-helmet',
@@ -72,20 +68,20 @@ const normalConfig = [
   },
   'gatsby-plugin-sass',
   {
-    resolve: "gatsby-source-filesystem",
+    resolve: 'gatsby-source-filesystem',
     options: {
-      path: "./src/data/",
+      path: './src/data/',
     },
   },
   {
-    resolve: "gatsby-source-filesystem",
+    resolve: 'gatsby-source-filesystem',
     options: {
-      path: "./markdown",
-      name: "markdown-pages"
+      path: './markdown',
+      name: 'markdown-pages',
     },
   },
-  "gatsby-transformer-json",
-  "gatsby-transformer-remark",
+  'gatsby-transformer-json',
+  'gatsby-transformer-remark',
   'gatsby-plugin-sharp',
   {
     resolve: `gatsby-transformer-remark`,
@@ -99,7 +95,6 @@ const normalConfig = [
             // base for generating different widths of each image.
             maxWidth: 800,
             linkImagesToOriginal: true,
-            sizeByPixelDensity: true,
             showCaptions: true,
           },
         },
@@ -108,14 +103,13 @@ const normalConfig = [
   },
 ]
 
-
 // Common settings to export.
 const exportObj = {
   siteMetadata: {
-    title: "Gatsby IPFS Boilerplate Starter",
-    author: "Chris Troutner",
-    description: "A Gatsby.js V2 Starter based on Forty by HTML5 UP"
-  }
+    title: 'Gatsby IPFS Boilerplate Starter',
+    author: 'Chris Troutner',
+    description: 'A Gatsby.js V2 Starter based on Forty by HTML5 UP',
+  },
 }
 // Build for IPFS
 if (ipfsPrefix) {
