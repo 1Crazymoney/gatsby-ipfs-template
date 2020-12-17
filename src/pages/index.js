@@ -9,8 +9,7 @@ import pic02 from '../assets/images/pic02.jpg'
 import pic05 from '../assets/images/pic05.jpg'
 
 // Get the IPFS hash from the BCH Blockchain.
-import MemoGet from 'memo-get-gatsby'
-const memoGet = new MemoGet()
+import Memo from '../services/memo-hash'
 
 // import BCHJS from '@chris.troutner/bch-js'
 
@@ -19,18 +18,29 @@ let _this
 class HomeIndex extends React.Component {
   constructor(props) {
     super(props)
-    _this = this
+
+    this.addr = `bitcoincash:qr7u857krgsvq0dwe8rzlt5rcx35r6hnmu6glavtx0`
+    this.memo = new Memo({bchAddr: this.addr})
 
     this.state = {
       ipfsHash: 'No Result',
       ipfsHashLink: '',
     }
+
+    _this = this
   }
 
   async componentDidMount() {
-    const addr = `bitcoincash:qr7u857krgsvq0dwe8rzlt5rcx35r6hnmu6glavtx0`
-    const hash = await memoGet.read(addr)
-    console.log(`hash: ${hash}`)
+    const hash = await this.memo.findHash()
+
+    if (!hash) {
+      console.error(
+        `Could not find IPFS hash in transactions for address ${this.addr}`
+      )
+      return
+    }
+    console.log(`latest IPFS hash: ${hash}`)
+
     this.setState({
       ipfsHash: hash,
       ipfsHashLink: `https://ipfs.io/ipfs/${hash}`,
