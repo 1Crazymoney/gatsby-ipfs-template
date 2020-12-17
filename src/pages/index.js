@@ -77,8 +77,8 @@ class HomeIndex extends React.Component {
                 </li>
                 <li>
                   Tor:{' '}
-                  <a href="http://3nt2u67vy7luf73j.onion">
-                    3nt2u67vy7luf73j.onion
+                  <a href="http://mscdffxifbhxiww6k6ub2buzdn3khqzoxpcbnbhrzkypdmkqz4u5hwid.onion">
+                    mscdffxifbhxiww6k6ub2buzdn3khqzoxpcbnbhrzkypdmkqz4u5hwid.onion
                   </a>
                 </li>
                 <li>
