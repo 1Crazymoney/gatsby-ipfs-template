@@ -35,10 +35,6 @@ class HomeIndex extends React.Component {
       ipfsHash: hash,
       ipfsHashLink: `https://ipfs.io/ipfs/${hash}`,
     })
-
-    // const bchjs = new BCHJS()
-    // const balance = await bchjs.Blockbook.balance(addr)
-    // console.log(`balance: ${JSON.stringify(balance, null, 2)}`)
   }
 
   render() {
