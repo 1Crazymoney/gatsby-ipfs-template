@@ -12,7 +12,7 @@ class Footer extends React.Component {
     super(props)
 
     this.addr = `bitcoincash:qr7u857krgsvq0dwe8rzlt5rcx35r6hnmu6glavtx0`
-    this.memo = new Memo({bchAddr: this.addr})
+    this.memo = new Memo({ bchAddr: this.addr })
 
     this.state = {
       ipfsHash: 'No Result',
@@ -99,6 +99,15 @@ class Footer extends React.Component {
               >
                 {this.state.ipfsHash}
               </a>
+            </li>
+            <li>
+              <a
+                href="https://memo.cash/profile/bitcoincash:qr7u857krgsvq0dwe8rzlt5rcx35r6hnmu6glavtx0"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Memo.cash Profile
+              </a> (Tracks the IPFS hash on the BCH blockchain.)
             </li>
           </ul>
         </div>
