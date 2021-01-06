@@ -10,7 +10,7 @@ import pic05 from '../assets/images/pic05.jpg'
 
 // Get the IPFS hash from the BCH Blockchain.
 import Memo from '../services/memo-hash'
-
+import Media from '../components/media'
 // import BCHJS from '@chris.troutner/bch-js'
 
 let _this
@@ -63,7 +63,7 @@ class HomeIndex extends React.Component {
         ></Helmet>
 
         <Banner />
-
+        <Media />
         <div id="main">
           <section id="two">
             <div className="inner">
@@ -132,14 +132,7 @@ class HomeIndex extends React.Component {
               </header>
               <Link to="https://troutsblog.com/about" target="_blank" className="link primary"></Link>
             </article>
-
-
-
-
-
           </section>
-
-
         </div>
       </Layout>
     )
