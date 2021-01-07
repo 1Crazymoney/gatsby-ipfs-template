@@ -2,8 +2,6 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 
-import pic11 from '../assets/images/pic11.jpg'
-
 // const IPFS = typeof window !== `undefined` ? require('ipfs') : null
 // const IPFS = require('ipfs')
 import IPFS from 'ipfs'
@@ -11,31 +9,41 @@ let ipfs
 const MASTER_MULTIADDR = `/dns4/wss.psfoundation.cash/tcp/443/wss/ipfs/QmaUW4oCVPUFLRqeSjvhHwGFJHGWrYWLBEt7WxnexDm3Xa`
 
 // const Generic = (props) => (
+let _this
 class IPFSPage extends React.Component {
-  // constructor(props) {
-  //   super(props)
-  // }
-
-  async initIpfs() {
-    ipfs = await ipfs
-    await ipfs.swarm.connect(MASTER_MULTIADDR)
+  constructor(props) {
+    super(props)
+    _this = this
+    this.state = {
+      output: '',
+      showTerminal: true,
+    }
   }
 
   async componentDidMount() {
-    console.log('Creating instance of IPFS...')
+    try {
+      console.log('Setting up instance of IPFS...')
+      this.handleLog('Setting up instance  of IPFS...')
 
-    ipfs = await IPFS.create()
+      ipfs = await IPFS.create()
+      this.handleLog('IPFS node created.')
 
-    // Pass the IPFS instance to the window object. Makes it easy to debug IPFS
-    // issues in the browser console.
-    if (typeof window !== 'undefined') window.ipfs = ipfs
+      // Pass the IPFS instance to the window object. Makes it easy to debug IPFS
+      // issues in the browser console.
+      if (typeof window !== 'undefined') window.ipfs = ipfs
 
-    await this.initIpfs()
+      await this.initIpfs()
 
-    console.log('...IPFS node created.')
+      console.log('...IPFS node setup.')
+      this.handleLog('...IPFS node setup.')
+    } catch (err) {
+      this.handleLog('Error trying to initialize IPFS node!')
+      console.error('Error in componentDidMount(): ', err)
+    }
   }
 
   render() {
+    const { output, showTerminal } = _this.state
     return (
       <Layout>
         <Helmet>
@@ -50,7 +58,16 @@ class IPFSPage extends React.Component {
                 <h1>IPFS Example</h1>
               </header>
               <span className="image main">
-                <img src={pic11} alt="" />
+                {showTerminal && (
+                  <textarea
+                    id="ipfsTerminal"
+                    name="ipfsTerminal"
+                    rows="10"
+                    cols="50"
+                    readOnly
+                    value={`${output ? `${output}>` : '>'}`}
+                  />
+                )}
               </span>
               <p>
                 This page demonstrates how to create an IPFS node in the
@@ -72,6 +89,62 @@ class IPFSPage extends React.Component {
         </div>
       </Layout>
     )
+  }
+
+  // Initialize the IPFS node and try to connect to the PSF bootstrap node.
+  async initIpfs() {
+    try {
+      ipfs = await ipfs
+      this.handleLog('IPFS node is ready.')
+
+      this.handleLog(
+        'Trying to connect to PSF node. This will fail if this page is not served over https...'
+      )
+      await ipfs.swarm.connect(MASTER_MULTIADDR)
+      this.handleLog('...IPFS node connected PSF node!')
+    } catch (err) {
+      console.error('Error in initIpfs()')
+      throw err
+    }
+  }
+
+  // Adds a line to the terminal
+  handleLog(str) {
+    try {
+      _this.setState({
+        output: _this.state.output + '   ' + str + '\n',
+      })
+      _this.keepScrolled()
+    } catch (error) {
+      console.warn(error)
+    }
+  }
+
+  // Keeps the terminal scrolled to the last line
+  keepScrolled() {
+    try {
+      // Keeps scrolled to the bottom
+      var textarea = document.getElementById('ipfsTerminal')
+      if (textarea) {
+        textarea.scrollTop = textarea.scrollHeight
+      }
+    } catch (error) {
+      console.warn(error)
+    }
+  }
+
+  // Shows the terminal
+  handleShowTerminal() {
+    _this.setState({
+      showTerminal: true,
+    })
+  }
+
+  // Hides the terminal
+  handleHideTerminal() {
+    _this.setState({
+      showTerminal: false,
+    })
   }
 }
 
