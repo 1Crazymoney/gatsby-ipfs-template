@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
 
-import pic02 from '../assets/images/pic02.jpg'
-import pic05 from '../assets/images/pic05.jpg'
+// import pic02 from '../assets/images/pic02.jpg'
+// import pic05 from '../assets/images/pic05.jpg'
 
 // Get the IPFS hash from the BCH Blockchain.
 import Memo from '../services/memo-hash'
@@ -20,7 +20,7 @@ class HomeIndex extends React.Component {
     super(props)
 
     this.addr = `bitcoincash:qr7u857krgsvq0dwe8rzlt5rcx35r6hnmu6glavtx0`
-    this.memo = new Memo({bchAddr: this.addr})
+    this.memo = new Memo({ bchAddr: this.addr })
 
     this.state = {
       ipfsHash: 'No Result',
@@ -63,7 +63,7 @@ class HomeIndex extends React.Component {
         ></Helmet>
 
         <Banner />
-        <Media />
+
         <div id="main">
           <section id="two">
             <div className="inner">
@@ -71,8 +71,27 @@ class HomeIndex extends React.Component {
                 <h2>Explore the Deep Web</h2>
               </header>
               <p>
-                This internet is bigger than just the web. You can access this
-                website via other links on these other deep-web networks:
+                This internet is bigger than just the web. Don't know what Tor
+                is? Check out{' '}
+                <a
+                  href="https://www.torproject.org/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  the Tor project
+                </a>
+                . Never heard of the Inter-Planetary File System (IPFS)?{' '}
+                <a href="https://ipfs.io" target="_blank" rel="noreferrer">
+                  Find out more
+                </a>
+                . These are separate networks on the internet. They kind of work
+                like the web, but they are separate and run by different rules.
+                They were created to fix some of the problems with the existing
+                web.
+              </p>
+              <p>
+                You can access this website via these other
+                deep-web networks:
               </p>
               <ul>
                 <li>
@@ -97,43 +116,22 @@ class HomeIndex extends React.Component {
                     {this.state.ipfsHash}
                   </a>
                 </li>
+                <li>
+                  Bitcoin Cash Blockchain:{' '}
+                  <a
+                    href="https://memo.cash/profile/bitcoincash:qr7u857krgsvq0dwe8rzlt5rcx35r6hnmu6glavtx0"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    bitcoincash:qr7u857krgsvq0dwe8rzlt5rcx35r6hnmu6glavtx0
+                  </a>
+                </li>
               </ul>
             </div>
           </section>
-
-          <section id="one" className="tiles">
-
-            <article style={{ backgroundImage: `url(${pic05})` }}>
-              <header className="major">
-                <h3>Videos</h3>
-                <p>Learn about censorship and how you can help fight it:</p>
-                <ul>
-                  <li>
-                    <a href="https://www.youtube.com/watch?v=RlNVyatwd5M" target="_blank" rel="noreferrer" style={{backgroundColor: '#8ea9e8'}}>
-                      <b>
-                      How Governments Censor Content
-                      </b>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="https://www.youtube.com/watch?v=Ez9YXpu_Chs" target="_blank" rel="noreferrer" style={{backgroundColor: '#8ea9e8'}}><b>
-                      How Uncensorable Publishing Works
-                    </b></a>
-                  </li>
-                </ul>
-              </header>
-            </article>
-
-            <article style={{ backgroundImage: `url(${pic02})` }}>
-              <header className="major">
-                <h3>Diagrams</h3>
-                <p>Read more about the construction of uncensorable technology</p>
-              </header>
-              <Link to="https://troutsblog.com/about" target="_blank" className="link primary"></Link>
-            </article>
-          </section>
         </div>
+
+        <Media />
       </Layout>
     )
   }

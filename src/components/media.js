@@ -1,18 +1,31 @@
 import React from 'react'
 
-
 class Media extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-    }
+    this.state = {}
   }
   render() {
     return (
       <div id="main">
         <section>
           <section className="spotlights">
-            <section style={{ border: '0px solid black' }}>
+            <section style={{ border: '5px solid black' }}>
+              <div className="content">
+                <div className="inner">
+                  <header className="major break-word">
+                    <h3>How Governments Censor Websites</h3>
+                  </header>
+                  <p>
+                    This is a non-technical, high-level overview of how
+                    governments engage in censorship. It doesn't focus on any
+                    particular country, but focuses on the three most common
+                    methods that have historically been used by all countries to
+                    restrict their citizens ability to access information on the
+                    internet.
+                  </p>
+                </div>
+              </div>
               <div className="youtube-responsive-container">
                 <iframe
                   width="560"
@@ -25,31 +38,62 @@ class Media extends React.Component {
                   style={{ padding: '10px' }}
                 />
               </div>
+            </section>
+
+            <section style={{ border: '5px solid black' }}>
               <div className="content">
                 <div className="inner">
                   <header className="major break-word">
-                    <h3>How Governments Censor Websites</h3>
+                    <h3>Installing an Uncensorable Web Server</h3>
                   </header>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing
-                    and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and
-                    scrambled it to make a type specimen book. It has
-                    survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in
-                    the 1960s with the release of Letraset sheets
-                    containing Lorem Ipsum passages, and more
-                    recently with desktop publishing software like
-                    Aldus PageMaker including versions of Lorem
-                    Ipsum.
-                    </p>
-
+                    This website is a 'website template', code that you can copy
+                    and customize. It's based on the{' '}
+                    <a
+                      href="https://www.gatsbyjs.com/docs/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      GatsbyJS
+                    </a>{' '}
+                    framework for building web apps. You can fork{' '}
+                    <a
+                      href="https://github.com/Permissionless-Software-Foundation/gatsby-ipfs-template"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      the code making up this website
+                    </a>{' '}
+                    to build your own.
+                  </p>
+                  <p>
+                    Once your site is customized, you'll need to deploy it. The
+                    video shows you how to set up{' '}
+                    <a
+                      href="https://github.com/Permissionless-Software-Foundation/docker-gatsby-webserver"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      this web server
+                    </a>{' '}
+                    which will serve your web app over{' '}
+                    <a href="https://ipfs.io" target="_blank" rel="noreferrer">
+                      IPFS
+                    </a>
+                    ,{' '}
+                    <a
+                      href="https://www.torproject.org/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Tor
+                    </a>
+                    , and the clear web, simultaniously. Tor makes is accessible
+                    privately. IPFS makes it easy to replicate and hard to
+                    censor.
+                  </p>
                 </div>
               </div>
-            </section>
-            <section style={{ border: '0px solid black' }}>
               <div className="youtube-responsive-container">
                 <iframe
                   width="560"
@@ -62,31 +106,45 @@ class Media extends React.Component {
                   style={{ padding: '10px' }}
                 />
               </div>
+            </section>
+
+            <section style={{ border: '5px solid black' }}>
               <div className="content">
                 <div className="inner">
                   <header className="major break-word">
-                    <h3>Installing an Uncensorable Web Server</h3>
+                    <h3>Create Your Own Bitcoin Cash Web Wallet</h3>
                   </header>
                   <p>
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when
-                    looking at its layout. The point of using Lorem Ipsum
-                    is that it has a more-or-less normal distribution of
-                    letters, as opposed to using 'Content here, content
-                    here', making it look like readable English. Many
-                    desktop publishing packages and web page editors now
-                    use Lorem Ipsum as their default model text, and a
-                    search for 'lorem ipsum' will uncover many web sites
-                    still in their infancy. Various versions have evolved
-                    over the years, sometimes by accident, sometimes on
-                    purpose (injected humour and the like).
-                    </p>
-
+                    While this website template is great for building a blog or
+                    other website, the{' '}
+                    <a
+                      href="https://github.com/Permissionless-Software-Foundation/bch-wallet-starter"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      bch-wallet-starter Gatsby Starter
+                    </a>{' '}
+                    can be customized to quickly build Bitcoin Cash (BCH) and
+                    Bitcoin ABC (BCHA) powered apps. That app template lets you
+                    send or recieve both coins and SLP tokens on these two
+                    blockchains. It's powered by {' '}
+                    <a
+                      href="https://fullstack.cash"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      FullStack.cash
+                    </a>.
+                  </p>
+                  <p>
+                    Just like this template, the wallet app can be
+                    simultaniously broadcasted over Tor, IPFS, and the clear
+                    web, or any combination of the three. This give you and your
+                    users many options for privately and reliably conducting
+                    business.
+                  </p>
                 </div>
               </div>
-            </section>
-
-            <section style={{ border: '0px solid black' }}>
               <div className="youtube-responsive-container">
                 <iframe
                   width="560"
@@ -99,45 +157,24 @@ class Media extends React.Component {
                   style={{ padding: '10px' }}
                 />
               </div>
+            </section>
+
+            <section style={{ border: '5px solid black' }}>
               <div className="content">
                 <div className="inner">
                   <header className="major break-word">
-                    <h3>Create Your Own Bitcoin Cash Web Wallet</h3>
+                    <h3>Building Uncensorable REST APIs</h3>
                   </header>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing
-                    and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and
-                    scrambled it to make a type specimen book. It has
-                    survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in
-                    the 1960s with the release of Letraset sheets
-                    containing Lorem Ipsum passages, and more
-                    recently with desktop publishing software like
-                    Aldus PageMaker including versions of Lorem
-                    Ipsum.
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when
-                    looking at its layout. The point of using Lorem Ipsum
-                    is that it has a more-or-less normal distribution of
-                    letters, as opposed to using 'Content here, content
-                    here', making it look like readable English. Many
-                    desktop publishing packages and web page editors now
-                    use Lorem Ipsum as their default model text, and a
-                    search for 'lorem ipsum' will uncover many web sites
-                    still in their infancy. Various versions have evolved
-                    over the years, sometimes by accident, sometimes on
-                    purpose (injected humour and the like).
-                    </p>
-
+                    This is a sneak peak of the future of uncensorable publishing. Not only can
+                    you use IPFS to make the website difficult to censor, it
+                    will eventually be possible to replace REST APIs with an
+                    IPFS-based API. This will allow apps to be truely uncensorable,
+                    accessed as easily from within the Chinese firewall as they
+                    are from Silicon Valley.
+                  </p>
                 </div>
               </div>
-            </section>
-
-
-            <section style={{ border: '0px solid black' }}>
               <div className="youtube-responsive-container">
                 <iframe
                   width="560"
@@ -149,28 +186,6 @@ class Media extends React.Component {
                   title="kickoff"
                   style={{ padding: '10px' }}
                 />
-              </div>
-              <div className="content">
-                <div className="inner">
-                  <header className="major break-word">
-                    <h3>Building Uncensorable REST APIs</h3>
-                  </header>
-                  <p>
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when
-                    looking at its layout. The point of using Lorem Ipsum
-                    is that it has a more-or-less normal distribution of
-                    letters, as opposed to using 'Content here, content
-                    here', making it look like readable English. Many
-                    desktop publishing packages and web page editors now
-                    use Lorem Ipsum as their default model text, and a
-                    search for 'lorem ipsum' will uncover many web sites
-                    still in their infancy. Various versions have evolved
-                    over the years, sometimes by accident, sometimes on
-                    purpose (injected humour and the like).
-                    </p>
-
-                </div>
               </div>
             </section>
           </section>

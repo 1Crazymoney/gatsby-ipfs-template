@@ -76,40 +76,6 @@ class Footer extends React.Component {
             </a>
             .
           </p>
-          <p>Mirrors of this site:</p>
-          <ul>
-            <li>
-              <b>Clearweb</b>:{' '}
-              <a href="https://uncensorablepublishing.com">
-                UncensorablePublishing.com
-              </a>
-            </li>
-            <li>
-              <b>Tor</b>:{' '}
-              <a href="http://mscdffxifbhxiww6k6ub2buzdn3khqzoxpcbnbhrzkypdmkqz4u5hwid.onion">
-                mscdffxifbhxiww6k6ub2buzdn3khqzoxpcbnbhrzkypdmkqz4u5hwid.onion
-              </a>
-            </li>
-            <li>
-              <b>IPFS</b>:{' '}
-              <a
-                href={_this.state.ipfsHashLink}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {this.state.ipfsHash}
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://memo.cash/profile/bitcoincash:qr7u857krgsvq0dwe8rzlt5rcx35r6hnmu6glavtx0"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Memo.cash Profile
-              </a> (Tracks the IPFS hash on the BCH blockchain.)
-            </li>
-          </ul>
         </div>
       </footer>
     )
