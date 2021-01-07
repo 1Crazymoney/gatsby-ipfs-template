@@ -20,20 +20,6 @@ class IPFSPage extends React.Component {
     }
   }
 
-  async initIpfs() {
-    try {
-      ipfs = await ipfs
-      this.handleLog('IPFS node is ready.')
-
-      this.handleLog('Trying to connect to PSF node. This will fail if this page is not served over https...')
-      await ipfs.swarm.connect(MASTER_MULTIADDR)
-      this.handleLog('...IPFS node connected PSF node!')
-    } catch (err) {
-      console.error('Error in initIpfs()')
-      throw err
-    }
-  }
-
   async componentDidMount() {
     try {
       console.log('Setting up instance of IPFS...')
@@ -103,6 +89,23 @@ class IPFSPage extends React.Component {
         </div>
       </Layout>
     )
+  }
+
+  // Initialize the IPFS node and try to connect to the PSF bootstrap node.
+  async initIpfs() {
+    try {
+      ipfs = await ipfs
+      this.handleLog('IPFS node is ready.')
+
+      this.handleLog(
+        'Trying to connect to PSF node. This will fail if this page is not served over https...'
+      )
+      await ipfs.swarm.connect(MASTER_MULTIADDR)
+      this.handleLog('...IPFS node connected PSF node!')
+    } catch (err) {
+      console.error('Error in initIpfs()')
+      throw err
+    }
   }
 
   // Adds a line to the terminal
