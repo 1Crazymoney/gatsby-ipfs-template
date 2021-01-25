@@ -44,6 +44,104 @@ class Media extends React.Component {
               <div className="content">
                 <div className="inner">
                   <header className="major break-word">
+                    <h3>Fight Censorship with a Site Mirror</h3>
+                  </header>
+                  <p>
+                    The easiest way to fight censorship, and support a site that
+                    is in danger of censorship, is to set up a site mirror.{' '}
+                    <a
+                      href="https://github.com/Permissionless-Software-Foundation/ipfs-site-mirror"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      ipfs-site-mirror
+                    </a>{' '}
+                    is the tool to allow you to easily mirror a site on IPFS.
+                    'Mirroring' a site means you are providing another
+                    functional copy that can take over if the original is ever
+                    taken down.
+                  </p>
+                  <p>
+                    The tool works by following the Bitcoin Cash address of the
+                    site. When the site is updated, a change notification will
+                    be published to that address. ipfs-site-mirror will
+                    automatically detect this change and download it. Once set
+                    up, you can completely forget about ipfs-site-mirror. The
+                    software will 'just work' and help protect your favorite
+                    site from censorship.
+                  </p>
+                </div>
+              </div>
+              <div className="youtube-responsive-container">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/nrtVuk3v1R0"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  title="kickoff"
+                  style={{ padding: '10px' }}
+                />
+              </div>
+            </section>
+
+            <section style={{ border: '5px solid black' }}>
+              <div className="content">
+                <div className="inner">
+                  <header className="major break-word">
+                    <h3>Create Your Own Bitcoin Cash Web Wallet</h3>
+                  </header>
+                  <p>
+                    While this website template is great for building a blog or
+                    other website, the{' '}
+                    <a
+                      href="https://github.com/Permissionless-Software-Foundation/bch-wallet-starter"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      bch-wallet-starter Gatsby Starter
+                    </a>{' '}
+                    can be customized to quickly build Bitcoin Cash (BCH) and
+                    Bitcoin ABC (BCHA) powered apps. That app template lets you
+                    send or recieve both coins and SLP tokens on these two
+                    blockchains. It's powered by{' '}
+                    <a
+                      href="https://fullstack.cash"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      FullStack.cash
+                    </a>
+                    .
+                  </p>
+                  <p>
+                    Just like this template, the wallet app can be
+                    simultaniously broadcasted over Tor, IPFS, and the clear
+                    web, or any combination of the three. This give you and your
+                    users many options for privately and reliably conducting
+                    business.
+                  </p>
+                </div>
+              </div>
+              <div className="youtube-responsive-container">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/G7ptg7VIRnk"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  title="kickoff"
+                  style={{ padding: '10px' }}
+                />
+              </div>
+            </section>
+
+            <section style={{ border: '5px solid black' }}>
+              <div className="content">
+                <div className="inner">
+                  <header className="major break-word">
                     <h3>Installing an Uncensorable Web Server</h3>
                   </header>
                   <p>
@@ -112,66 +210,15 @@ class Media extends React.Component {
               <div className="content">
                 <div className="inner">
                   <header className="major break-word">
-                    <h3>Create Your Own Bitcoin Cash Web Wallet</h3>
-                  </header>
-                  <p>
-                    While this website template is great for building a blog or
-                    other website, the{' '}
-                    <a
-                      href="https://github.com/Permissionless-Software-Foundation/bch-wallet-starter"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      bch-wallet-starter Gatsby Starter
-                    </a>{' '}
-                    can be customized to quickly build Bitcoin Cash (BCH) and
-                    Bitcoin ABC (BCHA) powered apps. That app template lets you
-                    send or recieve both coins and SLP tokens on these two
-                    blockchains. It's powered by {' '}
-                    <a
-                      href="https://fullstack.cash"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      FullStack.cash
-                    </a>.
-                  </p>
-                  <p>
-                    Just like this template, the wallet app can be
-                    simultaniously broadcasted over Tor, IPFS, and the clear
-                    web, or any combination of the three. This give you and your
-                    users many options for privately and reliably conducting
-                    business.
-                  </p>
-                </div>
-              </div>
-              <div className="youtube-responsive-container">
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/G7ptg7VIRnk"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                  title="kickoff"
-                  style={{ padding: '10px' }}
-                />
-              </div>
-            </section>
-
-            <section style={{ border: '5px solid black' }}>
-              <div className="content">
-                <div className="inner">
-                  <header className="major break-word">
                     <h3>Building Uncensorable REST APIs</h3>
                   </header>
                   <p>
-                    This is a sneak peak of the future of uncensorable publishing. Not only can
-                    you use IPFS to make the website difficult to censor, it
-                    will eventually be possible to replace REST APIs with an
-                    IPFS-based API. This will allow apps to be truely uncensorable,
-                    accessed as easily from within the Chinese firewall as they
-                    are from Silicon Valley.
+                    This is a sneak peak of the future of uncensorable
+                    publishing. Not only can you use IPFS to make the website
+                    difficult to censor, it will eventually be possible to
+                    replace REST APIs with an IPFS-based API. This will allow
+                    apps to be truely uncensorable, accessed as easily from
+                    within the Chinese firewall as they are from Silicon Valley.
                   </p>
                 </div>
               </div>
